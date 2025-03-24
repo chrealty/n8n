@@ -1,3 +1,4 @@
+import 'reflect-metadata'; // <-- ✅ This fixes decorator metadata issues
 import { LoginRequestDto, ResolveSignupTokenQueryDto } from '@n8n/api-types';
 import { Logger } from '@n8n/backend-common';
 import type { User, PublicUser } from '@n8n/db';
