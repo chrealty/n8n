@@ -32,8 +32,7 @@ export class ZPortalAutoLoginController {
 	async autoLogin(req: AuthlessRequest, res: Response) {
 		const { email, token } = req.body as ZPortalAutoLoginDto;
 
-		const VALID_TOKEN =
-			'E9iUdX5FfaDZi562QpIeWr2sC4wxdlUkGl02zFWojQgZLthhzBuXiv8dd8g7CNv30ZLJJflBmo6BpAMWPGF1a81DG0Frsgdvds5ni3fn5NB2BaIKFUHuQ1RQKw6PsAwZ';
+		const VALID_TOKEN = process.env.N8N_JWT_AUTOLOGIN_TOKEN;
 
 		if (token !== VALID_TOKEN) {
 			throw new AuthError('Invalid token');
