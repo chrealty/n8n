@@ -1,3 +1,4 @@
+import 'reflect-metadata'; // <-- ✅ This fixes decorator metadata issues
 import { LoginRequestDto, ResolveSignupTokenQueryDto } from '@n8n/api-types';
 import { isEmail } from 'class-validator';
 import { Response } from 'express';
